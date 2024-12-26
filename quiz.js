@@ -73,8 +73,10 @@ let reveiwStatus=document.createElement("h4");
 reveiwStatus.textContent=  el.reveiwStatus==true?  "ReveiwStatus: Reviewed " : "ReveiwStatus:  Not Reviewed "
 
 let reviewQuestion=document.createElement("button");
+reviewQuestion.setAttribute("class", "btn")
 reviewQuestion.textContent="Review Question"
 let deleteQuestion=document.createElement("button");
+deleteQuestionQuestion.setAttribute("class", "btn")
 deleteQuestion.textContent="Delete Question";
 card.append(title,A,B,C,D,correctOptions,reveiwStatus,reviewQuestion,deleteQuestion);
 cont.append(card);
@@ -91,9 +93,9 @@ deleteQuestion.addEventListener("click", function(){
 
  function deleteQuestionFn(el,i){
     let quizId=el.id;
-    let baseurl="https://scientific-young-ankylosaurus.glitch.me/quiz"
+    let baseurl="https://scientific-young-ankylosaurus.glitch.me"
     if(confirm("Are you sure to delete?")){
-        fetch(`${baseurl}/${quizId}`, {
+        fetch(`${baseurl}/quiz/${quizId}`, {
             medthod:"DELETE"
         }).then(()=>{
             alert("Question Deleted");
