@@ -1,0 +1,44 @@
+#nav{
+    background-color: blueviolet;
+    height:30px;
+}
+#nav-container{
+    display: flex;
+    /* margin-top:20px; */
+    justify-content: space-around;
+    align-items: center;
+    gap:10px;
+}
+#nav-container a{
+    color:white;
+    font-size:20px;
+    text-decoration: none;
+}
+
+#form{
+    width:50%;
+    margin:10px auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+#form input{
+    width:60%;
+}
+input[type="submit"]{
+    width:fit-content
+}
+
+/* quiz page styling */
+
+#cont{
+width:80%;
+margin:10px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+   text-align: center;
+}
+.quizdiv{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
